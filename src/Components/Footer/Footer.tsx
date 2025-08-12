@@ -4,6 +4,7 @@ import { useState } from 'react';
 export const Footer = () => {
     const [email, setEmail] = useState('');
 
+    // @ts-ignore
     const handleSubscribe = (e) => {
         e.preventDefault();
         // Aquí manejarías la suscripción al newsletter
