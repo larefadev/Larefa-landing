@@ -14,9 +14,7 @@ export const Footer = () => {
     return (
         <footer className="bg-white border-t border-gray-200 py-12 px-4">
             <div className="max-w-6xl mx-auto">
-                {/* Main Footer Content */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                    {/* Get in Touch Section */}
                     <div className="space-y-4">
                         <h3 className="text-xl font-bold text-black mb-4">Contáctanos</h3>
                         <p className="text-gray-600 text-sm leading-relaxed">
