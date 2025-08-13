@@ -1,13 +1,12 @@
 "use client";
-import { useState } from 'react';
+import {FormEvent, useState} from 'react';
 
 export const Footer = () => {
     const [email, setEmail] = useState('');
 
-    // @ts-ignore
-    const handleSubscribe = (e) => {
+
+    const handleSubscribe = (e : FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Aquí manejarías la suscripción al newsletter
         console.log('Suscribirse con email:', email);
         setEmail('');
     };
