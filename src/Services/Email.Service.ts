@@ -8,7 +8,7 @@ export class EmailService {
         vehicle: string;
         piece: string;
     }) {
-        const response = await fetch("http://localhost:3600/api/emailservice/send/buyer-register", {
+        const response = await fetch("https://la-refa-email-service.onrender.com/api/emailservice/send/buyer-register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
@@ -28,7 +28,7 @@ export class EmailService {
         phone: string;
         city: string;
     }) {
-        const response = await fetch("http://localhost:3600/api/emailservice/send/franchisee-register", {
+        const response = await fetch("https://la-refa-email-service.onrender.com/api/emailservice/send/franchisee-register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
