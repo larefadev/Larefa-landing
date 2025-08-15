@@ -28,7 +28,7 @@ export const Opinion = () => {
         }
     ];
 
-    const goToTestimonial = (index) => {
+    const goToTestimonial = (index : number) => {
         setCurrentTestimonial(index);
     };
 
@@ -68,7 +68,7 @@ export const Opinion = () => {
                             <p className="mt-4 text-gray-700 text-center leading-relaxed">
                                 {testimonial.testimonial}
                             </p>
-                            <span className="text-pink-400 text-4xl mt-4 block text-center">"</span>
+                            <span className="text-pink-400 text-4xl mt-4 block text-center">{'"'}</span>
                         </div>
                     ))}
                 </div>
@@ -90,7 +90,7 @@ export const Opinion = () => {
                         <p className="text-gray-700 text-center leading-relaxed mb-6">
                             {testimonials[currentTestimonial].testimonial}
                         </p>
-                        <span className="text-pink-400 text-6xl block text-center mb-8">"</span>
+                        <span className="text-pink-400 text-6xl block text-center mb-8">{'"'}</span>
                     </div>
 
                     {/* Dots de navegación */}
