@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const OurStores = () => {
     return (
-        <section className="px-6 py-12">
+        <section className="px-2 py-5">
             <div className="relative rounded-lg overflow-hidden">
                 {/* Imagen */}
                 <Image

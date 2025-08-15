@@ -1,5 +1,7 @@
 "use client";
 import {FormEvent, useState} from 'react';
+import { Facebook, Instagram, Music, MessageCircle } from "lucide-react";
+import {SiFacebook, SiInstagram, SiTiktok, SiWhatsapp} from 'react-icons/si';
 
 export const Footer = () => {
     const [email, setEmail] = useState('');
@@ -10,6 +12,9 @@ export const Footer = () => {
         console.log('Suscribirse con email:', email);
         setEmail('');
     };
+
+
+
 
     return (
         <footer className="bg-white border-t border-gray-200 py-12 px-4">
@@ -122,25 +127,24 @@ export const Footer = () => {
 
                         {/* Social Media Icons */}
                         <div className="flex space-x-4 pt-4">
+                            {/* Facebook */}
                             <a href="#" className="text-blue-600 hover:text-blue-700 transition">
-                                <div className="w-6 h-6 bg-blue-600 rounded text-white flex items-center justify-center text-xs font-bold">
-                                    f
-                                </div>
+                                <SiFacebook className="w-6 h-6" />
                             </a>
+
+                            {/* Instagram */}
                             <a href="#" className="text-pink-600 hover:text-pink-700 transition">
-                                <div className="w-6 h-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded text-white flex items-center justify-center text-xs font-bold">
-                                    @
-                                </div>
+                                <SiInstagram className="w-6 h-6" />
                             </a>
+
+                            {/* TikTok */}
                             <a href="#" className="text-black hover:text-gray-700 transition">
-                                <div className="w-6 h-6 bg-black rounded text-white flex items-center justify-center text-xs font-bold">
-                                    t
-                                </div>
+                                <SiTiktok className="w-6 h-6" />
                             </a>
+
+                            {/* WhatsApp */}
                             <a href="#" className="text-green-600 hover:text-green-700 transition">
-                                <div className="w-6 h-6 bg-green-500 rounded text-white flex items-center justify-center text-xs font-bold">
-                                    W
-                                </div>
+                                <SiWhatsapp className="w-6 h-6" />
                             </a>
                         </div>
                     </div>
