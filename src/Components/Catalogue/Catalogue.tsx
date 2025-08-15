@@ -65,7 +65,7 @@ export const Catalogue = () => {
         setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
     };
 
-    const goToPage = (page) => {
+    const goToPage = (page : number) => {
         setCurrentPage(page);
     };
 
