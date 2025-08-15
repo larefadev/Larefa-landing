@@ -4,7 +4,7 @@ import { Bolt, Globe, Wrench, Handshake } from "lucide-react";
 
 export const OurPromise = () => {
     const [current, setCurrent] = useState(0);
-    const scrollContainerRef = useRef(null);
+    const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
     const promises = [
         {
@@ -39,19 +39,19 @@ export const OurPromise = () => {
 
     const handleScroll = () => {
         if (scrollContainerRef.current) {
-            const scrollLeft:number = scrollContainerRef.current.scrollLeft;
-            const cardWidth:number = scrollContainerRef.current.offsetWidth;
+            const scrollLeft = scrollContainerRef.current.scrollLeft;
+            const cardWidth = scrollContainerRef.current.offsetWidth;
             const newSlide = Math.round(scrollLeft / cardWidth);
             setCurrent(newSlide);
         }
     };
 
-    const scrollToSlide = (index : number) => {
+    const scrollToSlide = (index: number) => {
         if (scrollContainerRef.current) {
-            const cardWidth: number = scrollContainerRef.current.offsetWidth;
+            const cardWidth = scrollContainerRef.current.offsetWidth;
             scrollContainerRef.current.scrollTo({
                 left: index * cardWidth,
-                behavior: 'smooth'
+                behavior: "smooth",
             });
             setCurrent(index);
         }
@@ -60,8 +60,8 @@ export const OurPromise = () => {
     useEffect(() => {
         const container = scrollContainerRef.current;
         if (container) {
-            container.addEventListener('scroll', handleScroll);
-            return () => container.removeEventListener('scroll', handleScroll);
+            container.addEventListener("scroll", handleScroll);
+            return () => container.removeEventListener("scroll", handleScroll);
         }
     }, []);
 
@@ -77,7 +77,7 @@ export const OurPromise = () => {
                     entregamos cada día:
                 </p>
 
-                {/* Vista Desktop - Grid normal */}
+                {/* Vista Desktop */}
                 <div className="hidden sm:grid sm:grid-cols-2 gap-6 mt-10">
                     {promises.map((item, index) => (
                         <div
@@ -89,18 +89,14 @@ export const OurPromise = () => {
                                 <div>
                                     <h3
                                         className={`text-lg font-semibold ${
-                                            item.bg.includes("red")
-                                                ? "text-white"
-                                                : "text-gray-900"
+                                            item.bg.includes("red") ? "text-white" : "text-gray-900"
                                         }`}
                                     >
                                         {item.title}
                                     </h3>
                                     <p
                                         className={`mt-2 text-sm ${
-                                            item.bg.includes("red")
-                                                ? "text-red-100"
-                                                : "text-gray-600"
+                                            item.bg.includes("red") ? "text-red-100" : "text-gray-600"
                                         }`}
                                     >
                                         {item.description}
@@ -111,15 +107,15 @@ export const OurPromise = () => {
                     ))}
                 </div>
 
-                {/* Vista Móvil - Scroll horizontal */}
+                {/* Vista Móvil */}
                 <div className="sm:hidden mt-10">
                     <div
                         ref={scrollContainerRef}
                         className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4"
                         style={{
-                            scrollbarWidth: 'none',
-                            msOverflowStyle: 'none',
-                            WebkitOverflowScrolling: 'touch'
+                            scrollbarWidth: "none",
+                            msOverflowStyle: "none",
+                            WebkitOverflowScrolling: "touch",
                         }}
                     >
                         {promises.map((item, index) => (
@@ -132,9 +128,7 @@ export const OurPromise = () => {
                                     <div>
                                         <h3
                                             className={`text-lg font-bold mb-3 ${
-                                                item.bg.includes("red")
-                                                    ? "text-white"
-                                                    : "text-gray-900"
+                                                item.bg.includes("red") ? "text-white" : "text-gray-900"
                                             }`}
                                         >
                                             {item.title}
@@ -154,7 +148,7 @@ export const OurPromise = () => {
                         ))}
                     </div>
 
-                    {/* Puntos de navegación */}
+                    {/* Navegación */}
                     <div className="flex justify-center gap-2 mt-6">
                         {promises.map((_, i) => (
                             <button
