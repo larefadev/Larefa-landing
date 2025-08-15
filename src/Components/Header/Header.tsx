@@ -33,9 +33,8 @@ export const Header = () => {
                     <li className="hover:text-red-500 cursor-pointer">Contacto</li>
                 </ul>
 
-                {/* Botón WhatsApp */}
                 <a
-                    href="https://wa.me/1234567890"
+
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-red-500 px-5 py-2 rounded-md flex items-center gap-2 hover:bg-red-600 transition"
@@ -45,11 +44,11 @@ export const Header = () => {
             </nav>
 
             {/* Contenido central */}
-            <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    LA REFA – El Futuro de las Refaccionarias, Más Rápido e Inteligente
+            <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 w-[90%] text-center max-w-6xl mx-auto">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 w-full max-w-5xl leading-tight  w-[90%]">
+                    LA REFA – Hecho en México, para los que mueven a México.
                 </h1>
-                <p className="text-gray-200 mb-8">
+                <p className="text-gray-200 mb-8 text-lg md:text-xl max-w-3xl">
                     Si no lo tenemos, lo conseguimos… aquí, en Estados Unidos, o en China.
                 </p>
 
