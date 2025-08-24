@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { Bolt, Globe, Wrench, Handshake } from "lucide-react";
+import { ScrollAnimation } from "@/Components/Animations";
 
 export const OurPromise = () => {
     const [current, setCurrent] = useState(0);
@@ -68,42 +69,48 @@ export const OurPromise = () => {
     return (
         <section className="py-16 bg-white">
             <div className="max-w-6xl mx-auto px-6 lg:px-8">
-                <h2 className="text-3xl font-bold text-gray-900">
-                    Nuestra Promesa Para Ti
-                </h2>
-                <p className="mt-4 text-lg text-gray-600">
-                    Cuando eliges LA REFA, no solo estás comprando piezas — estás
-                    invirtiendo en confiabilidad, servicio y velocidad. Esto es lo que
-                    entregamos cada día:
-                </p>
+                <ScrollAnimation animation="slideUp" delay={200}>
+                    <h2 className="text-3xl font-bold text-gray-900">
+                        Nuestra Promesa Para Ti
+                    </h2>
+                </ScrollAnimation>
+                
+                <ScrollAnimation animation="fadeIn" delay={400}>
+                    <p className="mt-4 text-lg text-gray-600">
+                        Cuando eliges LA REFA, no solo estás comprando piezas — estás
+                        invirtiendo en confiabilidad, servicio y velocidad. Esto es lo que
+                        entregamos cada día:
+                    </p>
+                </ScrollAnimation>
 
                 {/* Vista Desktop */}
                 <div className="hidden sm:grid sm:grid-cols-2 gap-6 mt-10">
                     {promises.map((item, index) => (
-                        <div
-                            key={index}
-                            className={`p-6 rounded-md shadow-sm ${item.bg}`}
-                        >
-                            <div className="flex flex-col items-start gap-4">
-                                {item.icon}
-                                <div>
-                                    <h3
-                                        className={`text-lg font-semibold ${
-                                            item.bg.includes("red") ? "text-white" : "text-gray-900"
-                                        }`}
-                                    >
-                                        {item.title}
-                                    </h3>
-                                    <p
-                                        className={`mt-2 text-sm ${
-                                            item.bg.includes("red") ? "text-red-100" : "text-gray-600"
-                                        }`}
-                                    >
-                                        {item.description}
-                                    </p>
+                        <ScrollAnimation key={index} animation="slideUp" delay={600 + index * 200}>
+                            <div
+                                className={`p-6 rounded-md shadow-sm h-full min-h-[280px] flex flex-col ${item.bg}`}
+                            >
+                                <div className="flex flex-col items-start gap-4 h-full">
+                                    {item.icon}
+                                    <div className="flex-1 flex flex-col">
+                                        <h3
+                                            className={`text-lg font-semibold ${
+                                                item.bg.includes("red") ? "text-white" : "text-gray-900"
+                                            }`}
+                                        >
+                                            {item.title}
+                                        </h3>
+                                        <p
+                                            className={`mt-2 text-sm flex-1 ${
+                                                item.bg.includes("red") ? "text-red-100" : "text-gray-600"
+                                            }`}
+                                        >
+                                            {item.description}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollAnimation>
                     ))}
                 </div>
 

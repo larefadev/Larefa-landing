@@ -8,43 +8,43 @@ export const Catalogue = () => {
     const categories = [
         {
             id: 1,
-            name: "Amortiguadores",
-            image: "/Rectangle1.png"
+            name: "Suspensión y Dirección",
+            image: "/Images/Cata-1.jpeg"
         },
         {
             id: 2,
-            name: "Balatas",
-            image: "/Rectangle3.png"
+            name: "Refrigeración",
+            image: "/Images/Cata-3.jpeg"
         },
         {
             id: 3,
-            name: "Bases de Amortiguador",
-            image: "/Rectangle4.png"
+            name: "Frenos",
+            image: "/Images/Cata-2.jpeg"
         },
         {
             id: 4,
-            name: "Rótulas",
-            image: "/Rectangle5.png"
+            name: "Transmisión",
+            image: "/Images/th.jpeg"
         },
         {
             id: 5,
-            name: "Terminales de Dirección",
-            image: "/Rectangle7.png"
+            name: "Eléctrico",
+            image: "/Images/Cata-6.jpeg"
         },
         {
             id: 6,
-            name: "Cubos de Rueda",
-            image: "/Rectangle1.png"
+            name: "Motor",
+            image: "/Images/Cata-7.jpeg"
         },
         {
             id: 7,
-            name: "Flechas CV",
-            image: "/Rectangle4.png"
+            name: "Colisión",
+            image: "/Images/Cata-4.jpeg"
         },
         {
             id: 8,
-            name: "Brazos de Control",
-            image: "/Rectangle3.png"
+            name: "Accesorios",
+            image: "/Images/Cata-5.jpeg"
         }
     ];
 
@@ -70,7 +70,7 @@ export const Catalogue = () => {
     };
 
     return (
-        <section className="max-w-7xl mx-auto px-4 py-16 bg-white">
+        <section className="max-w-7xl mx-auto px-4 py-16 bg-white-400">
             {/* Encabezado */}
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
                 <div className="mb-6 lg:mb-0 lg:max-w-2xl">
