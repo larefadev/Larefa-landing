@@ -27,26 +27,26 @@ export const About = () => {
                 <div className="grid grid-cols-3 gap-4">
                     {/* Tarjeta */}
                     <ScrollAnimation animation="slideUp" delay={800}>
-                        <div className="bg-gray-100 p-6 flex flex-col items-center text-center">
-                            <FaStore className="text-red-600 text-5xl mb-2" />
-                            <p className="font-medium text-red-600">Tienda</p>
-                            <span className="text-red-600 mt-1">→</span>
+                        <div className="bg-gray-100 p-12 h-[400px] flex flex-col items-center text-center justify-center">
+                            <FaStore className="text-red-600 text-6xl mb-6" />
+                            <p className="font-medium text-red-600 text-xl">Tienda</p>
+                            <span className="text-red-600 mt-6 text-2xl">→</span>
                         </div>
                     </ScrollAnimation>
 
                     <ScrollAnimation animation="slideUp" delay={1000}>
-                        <div className="bg-gray-100 p-6 flex flex-col items-center text-center">
-                            <MdOutlineSettings className="text-red-600 text-5xl mb-2" />
-                            <p className="font-medium text-red-600">Sistema Digital</p>
-                            <span className="text-red-600 mt-1">→</span>
+                        <div className="bg-gray-100 p-12 h-[400px] flex flex-col items-center text-center justify-center">
+                            <MdOutlineSettings className="text-red-600 text-6xl mb-6" />
+                            <p className="font-medium text-red-600 text-xl">Sistema Digital</p>
+                            <span className="text-red-600 mt-6 text-2xl">→</span>
                         </div>
                     </ScrollAnimation>
 
                     <ScrollAnimation animation="slideUp" delay={1200}>
-                        <div className="bg-gray-100 p-6 flex flex-col items-center text-center">
-                            <FaTruck className="text-red-600 text-5xl mb-2" />
-                            <p className="font-medium text-red-600">Entrega Rápida</p>
-                            <span className="text-red-600 mt-1">→</span>
+                        <div className="bg-gray-100 p-12 h-[400px] flex flex-col items-center text-center justify-center">
+                            <FaTruck className="text-red-600 text-6xl mb-6" />
+                            <p className="font-medium text-red-600 text-xl">Entrega Rápida</p>
+                            <span className="text-red-600 mt-6 text-2xl">→</span>
                         </div>
                     </ScrollAnimation>
                 </div>
@@ -71,25 +71,25 @@ export const About = () => {
                             <h4 className="text-lg font-bold mb-4">Ventajas Tecnológicas</h4>
                         </ScrollAnimation>
                         
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             <ScrollAnimation animation="scaleIn" delay={1200}>
-                                <div className="bg-gray-100 p-4 flex flex-col items-center text-center rounded">
+                                <div className="bg-gray-100 p-6 h-[120px] flex flex-col items-center text-center justify-center rounded">
                                     <MdTrackChanges className="text-2xl mb-2" />
-                                    <p className="font-medium">Rastreo en Tiempo Real</p>
+                                    <p className="font-medium text-sm">Rastreo en Tiempo Real</p>
                                 </div>
                             </ScrollAnimation>
                             
                             <ScrollAnimation animation="scaleIn" delay={1400}>
-                                <div className="bg-gray-100 p-4 flex flex-col items-center text-center rounded">
+                                <div className="bg-gray-100 p-6 h-[120px] flex flex-col items-center text-center justify-center rounded">
                                     <MdInventory className="text-2xl mb-2" />
-                                    <p className="font-medium">Inventario Predictivo</p>
+                                    <p className="font-medium text-sm">Inventario Predictivo</p>
                                 </div>
                             </ScrollAnimation>
                             
                             <ScrollAnimation animation="scaleIn" delay={1600}>
-                                <div className="bg-red-600 text-white p-4 flex flex-col items-center text-center rounded">
+                                <div className="bg-red-600 text-white p-6 h-[120px] flex flex-col items-center text-center justify-center rounded">
                                     <FaCube className="text-2xl mb-2" />
-                                    <p className="font-medium">Abastecimiento Automatizado</p>
+                                    <p className="font-medium text-sm">Abastecimiento Automatizado</p>
                                 </div>
                             </ScrollAnimation>
                         </div>
